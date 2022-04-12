@@ -11,7 +11,7 @@ const Home = () => {
   const jobArray = Array.from('web developer')
 
   useEffect(() => {
-    return setTimeout(() => {
+    setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 4000)
   }, [])
