@@ -1,13 +1,16 @@
 import { faGithub, faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
 import './index.scss'
 
-const Topbar = () => {
+const TopNavBar = () => {
   return (
     <div className="nav">
       <div className="nav-header">
-        <div className="nav-title">Santi</div>
+        <NavLink exact="true" className="nav-logo" to="/">
+          <FontAwesomeIcon icon={faTerminal} />
+        </NavLink>
       </div>
       <div className="nav-links">
         <ul>
@@ -42,15 +45,8 @@ const Topbar = () => {
           </i>
         </ul>
       </div>
-      <div className="nav-btn">
-        <label htmlFor="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
     </div>
   )
 }
 
-export default Topbar
+export default TopNavBar
